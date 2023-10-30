@@ -27,7 +27,7 @@ public class AdaugareMasini {
                 new CarUI("Audi");
             }
         });
-        
+
         JButton button2 = new JButton();
         ImageIcon icon2 = new ImageIcon("imagini-adaugare/img2.jpg");
         button2.setIcon(icon2);
