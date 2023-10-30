@@ -48,6 +48,13 @@ public class CatalogMasiniStart {
                 new AdaugareMasini();
             }
         });
+
+         buttonSearch.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                frameMain.dispose();
+                new CautareMasini();
+            }
+        });
         
         frameMain.add(startBgLabel);
 
