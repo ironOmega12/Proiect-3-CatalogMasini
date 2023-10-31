@@ -57,6 +57,11 @@ public class Masini extends Vehicle{
     }
 
     @Override
+    public String refillOrRecharge() {
+        return "Am umplut rezervorul!";
+    }
+
+    @Override
 
     public String toString(){
         return "Marca: " + marca + " " + "Model: " + model + " " + super.toString();
