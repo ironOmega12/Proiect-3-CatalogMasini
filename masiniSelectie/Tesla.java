@@ -90,8 +90,8 @@ public class Tesla {
         TeslaBackgroundLabel.add(btnAdd);
         btnAdd.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                Masini masinaNoua = new Masini(textFieldVIN.getText(), Double.parseDouble(textFieldKM.getText()), brand, selectetModel);
-                Masini.addCar(masinaNoua);
+                MasiniElectrice masinaNoua = new MasiniElectrice(textFieldVIN.getText(), Double.parseDouble(textFieldKM.getText()), brand, selectetModel, 50);
+                MasiniElectrice.addCar(masinaNoua);
                 JOptionPane.showMessageDialog(null, "Success", "Notification", JOptionPane.INFORMATION_MESSAGE);
             }
         });
