@@ -12,6 +12,7 @@ This project is a Java-based GUI application to catalog and manage a collection 
 - **Add Car**: This feature allows users to add new cars to the catalog. There are nine prominent car brands available, each represented with its image. Upon selecting a brand, users are taken to a dedicated page with the chosen car's background. Here, users can input specific details about the car. Once done, they can either add the car details or navigate back to the main page.
 
 - **Search Car**: A utility to search cars using their unique VIN (Vehicle Identification Number). This aids users in quickly retrieving and viewing the details of a particular car.
+Displays a dialog that confirms that the car's fuel / battery is already filled.
 
 - **Display Total Cars**: This is a quick info feature that displays the total number of cars cataloged in the application.
 
