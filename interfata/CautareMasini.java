@@ -29,20 +29,20 @@ public class CautareMasini {
         frameCautare.setLocationRelativeTo(null);  // This will center the frame.
 
         acasa = new TransparentRoundedButton("Acasa");
-        acasa.setBounds(240, 50, 150, 30);
+        acasa.setBounds(220, 50, 150, 30);
         buttonSearch = new TransparentRoundedButton("Cauta masina");
-        buttonSearch.setBounds(240, 250, 150, 30);
+        buttonSearch.setBounds(220, 250, 150, 30);
 
         vinLabel = new JLabel("<html><font face='Arial'  size='5' color='yellow'>Introduceti VIN:</font></html>");
-        vinLabel.setBounds(250, 290, 350, 30);
+        vinLabel.setBounds(220, 290, 350, 30);
         vinLabel.setVisible(false);
 
         VIN = new JTextField();
-        VIN.setBounds(240, 320, 150, 30);
+        VIN.setBounds(220, 320, 150, 30);
         VIN.setVisible(false);
 
         searchButton = new TransparentRoundedButton("Click pentru cautare");
-        searchButton.setBounds(240, 360, 150, 30);
+        searchButton.setBounds(220, 360, 150, 30);
         searchButton.setVisible(false);
 
         acasa.addActionListener(new ActionListener() {
@@ -68,6 +68,7 @@ public class CautareMasini {
                 VIN.setText("");
                 if (foundCar != null) {
                     displayCarDetails(foundCar);
+                    JOptionPane.showMessageDialog(null, foundCar.refillOrRecharge(), "Rezervor / baterie", JOptionPane.INFORMATION_MESSAGE);
                 } else {
                     vinLabel.setVisible(false);
                     VIN.setVisible(false);
