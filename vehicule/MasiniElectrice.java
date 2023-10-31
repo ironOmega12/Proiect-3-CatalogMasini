@@ -12,8 +12,13 @@ public class MasiniElectrice extends Masini implements Incarcare{
         return nivelBaterie;
     }
 
-    public void setBaterie(int nivelBaterie){
+    public void setBaterie(int nivelBaterie) {
         this.nivelBaterie = nivelBaterie;
+    }
+
+    @Override
+    public String refillOrRecharge() {
+        return "Bateria-i la maxim!";
     }
 
     @Override
