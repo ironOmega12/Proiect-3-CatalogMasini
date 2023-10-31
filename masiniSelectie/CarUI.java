@@ -43,10 +43,6 @@ public class CarUI {
                 carBackground = new ImageIcon(this.getClass().getResource("opel_background.jpg"));
                 comboBoxModel = new JComboBox<>(new String[] { "Astra J", "Vectra A", "Calibra" });
                 break;
-            case "Porsche":
-                carBackground = new ImageIcon(this.getClass().getResource("porsche_background.jpg"));
-                comboBoxModel = new JComboBox<>(new String[] { "Panamera", "Cayenne", "Taycan" });
-                break;
             case "Volkswagen":
                 carBackground = new ImageIcon(this.getClass().getResource("volkswagen_background.jpg"));
                 comboBoxModel = new JComboBox<>(new String[] { "Passat", "Golf", "Maybach" });
