@@ -67,7 +67,7 @@ public class AdaugareMasini {
         button5.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 frameAdaugare.dispose();
-                new CarUI("Porsche");
+                new Custom();
             }
         });
 
