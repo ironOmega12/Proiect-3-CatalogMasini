@@ -25,6 +25,8 @@ public abstract class Vehicle {
         this.nrKm = nrKm;
     }
 
+    public abstract String refillOrRecharge();
+
     @Override
     public String toString() {
         return "Placuta Inmatriculare: " + placutaInmatriculare + " " + "Numar Kilometri: " + " " + nrKm;
