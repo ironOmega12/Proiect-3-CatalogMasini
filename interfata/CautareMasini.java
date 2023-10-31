@@ -7,8 +7,7 @@ import java.awt.BorderLayout;
 
 import javax.swing.*;
 
-import vehicule.Masini;
-import vehicule.Vehicle;
+import vehicule.*;
 
 
 public class CautareMasini {
