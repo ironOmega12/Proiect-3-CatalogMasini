@@ -24,7 +24,7 @@ public class AdaugareMasini {
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 frameAdaugare.dispose();
-                new CarUI("Audi");
+                new CarUI("Audi",false);
             }
         });
 
@@ -35,7 +35,7 @@ public class AdaugareMasini {
         button2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 frameAdaugare.dispose();
-                new CarUI("BMW");
+                new CarUI("BMW",false);
             }
         });
 
@@ -46,7 +46,7 @@ public class AdaugareMasini {
         button3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 frameAdaugare.dispose();
-                new CarUI("Volkswagen");
+                new CarUI("Volkswagen",false);
             }
         });
         JButton button4 = new JButton();
@@ -56,7 +56,7 @@ public class AdaugareMasini {
         button4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 frameAdaugare.dispose();
-                new CarUI("Mercedes");
+                new CarUI("Mercedes",false);
             }
         });
 
@@ -78,7 +78,7 @@ public class AdaugareMasini {
         button6.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 frameAdaugare.dispose();
-                new CarUI("Opel");
+                new CarUI("Opel",false);
             }
         });
 
@@ -89,7 +89,7 @@ public class AdaugareMasini {
         button7.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 frameAdaugare.dispose();
-                new Tesla("Tesla");
+                new Tesla("Tesla",true);
             }
         });
 
@@ -100,7 +100,7 @@ public class AdaugareMasini {
         button8.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 frameAdaugare.dispose();
-                new CarUI("Hyundai");
+                new CarUI("Hyundai",false);
             }
         }); 
         JButton button9 = new JButton();
@@ -110,9 +110,10 @@ public class AdaugareMasini {
         button9.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 frameAdaugare.dispose();
-                new CarUI("Ford");
+                new CarUI("Ford",false);
             }
         });
+
 
 
 

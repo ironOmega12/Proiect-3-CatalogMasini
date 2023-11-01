@@ -58,7 +58,7 @@ public class Masini extends Vehicle{
 
     @Override
     public String refillOrRecharge() {
-        return "Am umplut rezervorul!";
+        return "Rezervorul este plin";
     }
 
     @Override

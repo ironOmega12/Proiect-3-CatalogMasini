@@ -13,9 +13,10 @@ public class Tesla {
     private JTextField textFieldVIN, textFieldKM;
     private JLabel TeslaBackgroundLabel, lblMarca, lblModel, lblSasiu, lblKM;
     private ImageIcon TeslaBackground;
+    private static int electricCarCount = 0;
 
 
-    public Tesla(String brand) {
+    public Tesla(String brand,boolean isElectric) {
 
         TeslaBackground = new ImageIcon(this.getClass().getResource("tesla_background.jpg"));
         TeslaBackgroundLabel = new JLabel(TeslaBackground);
@@ -93,6 +94,10 @@ public class Tesla {
                 MasiniElectrice masinaNoua = new MasiniElectrice(textFieldVIN.getText(), Double.parseDouble(textFieldKM.getText()), brand, selectetModel, 50);
                 MasiniElectrice.addCar(masinaNoua);
                 JOptionPane.showMessageDialog(null, "Success", "Notification", JOptionPane.INFORMATION_MESSAGE);
+                if(isElectric==true){
+                    electricCarCount++;
+                }
+
             }
         });
 
@@ -112,5 +117,12 @@ public class Tesla {
         cadruTesla.add(TeslaBackgroundLabel);
 
         cadruTesla.setVisible(true);
+
+
+
+    }
+
+    public static int getElectricCarCount() {
+        return electricCarCount;
     }
 }

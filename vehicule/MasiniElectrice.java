@@ -18,7 +18,7 @@ public class MasiniElectrice extends Masini implements Incarcare{
 
     @Override
     public String refillOrRecharge() {
-        return "Bateria-i la maxim!";
+        return "Sanatate baterie 100%!";
     }
 
     @Override

@@ -55,7 +55,14 @@ public class CatalogMasiniStart {
                 new CautareMasini();
             }
         });
-        
+
+
+           buttonNumber.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                frameMain.dispose();
+                new NumarMasini();
+            }
+        });
         frameMain.add(startBgLabel);
 
         frameMain.setVisible(true);

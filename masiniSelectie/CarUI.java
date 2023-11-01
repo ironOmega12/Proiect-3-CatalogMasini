@@ -14,10 +14,14 @@ public class CarUI {
     private JLabel carBackgroundLabel, lblMarca, lblModel, lblSasiu, lblKM;
     private ImageIcon carBackground;
     private String brand;
+    private boolean isElectric;
+    private static int electricCarCount = Tesla.getElectricCarCount();
+    private static int nonElectricCarCount = 0;
 
-    public CarUI(String brand) {
+
+    public CarUI(String brand,boolean isElectric) {
         this.brand = brand;
-
+        this.isElectric=isElectric;
         switch (brand) {
             case "Audi":
                 carBackground = new ImageIcon(this.getClass().getResource("audi_background.jpg"));
@@ -51,6 +55,7 @@ public class CarUI {
             default:
                 throw new IllegalArgumentException("Unsupported brand");
         }
+
 
         carBackgroundLabel = new JLabel(carBackground);
         carBackgroundLabel.setSize(500, 600);
@@ -126,6 +131,12 @@ public class CarUI {
                 Masini masinaNoua = new Masini(textFieldVIN.getText(), Double.parseDouble(textFieldKM.getText()), brand, selectetModel);
                 Masini.addCar(masinaNoua);
                 JOptionPane.showMessageDialog(null, "Success", "Notification", JOptionPane.INFORMATION_MESSAGE);
+
+                   if (isElectric) {
+            electricCarCount++;
+                    } else {
+            nonElectricCarCount++;
+        }
             }
         });
 
@@ -150,5 +161,20 @@ public class CarUI {
         cadruCar.add(carBackgroundLabel);
 
         cadruCar.setVisible(true);
+
+
     }
-}
+
+    // Getter methods for car counts
+    public static int getElectricCarCount() {
+        return electricCarCount;
+    }
+
+    public static int getNonElectricCarCount() {
+        return nonElectricCarCount;
+    }
+
+
+
+    }
+
