@@ -128,15 +128,22 @@ public class CarUI {
         carBackgroundLabel.add(btnAdd);
         btnAdd.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                Masini masinaNoua = new Masini(textFieldVIN.getText(), Double.parseDouble(textFieldKM.getText()), brand, selectetModel);
-                Masini.addCar(masinaNoua);
-                JOptionPane.showMessageDialog(null, "Success", "Notification", JOptionPane.INFORMATION_MESSAGE);
+                double km = Double.parseDouble(textFieldKM.getText());
+                if (km < 0) {
+                    JOptionPane.showMessageDialog(null, "KM nu pot fi negativi", "Invalid Input",
+                            JOptionPane.ERROR_MESSAGE);
+                } else {
+                    Masini masinaNoua = new Masini(textFieldVIN.getText(), Double.parseDouble(textFieldKM.getText()),
+                            brand, selectetModel);
+                    Masini.addCar(masinaNoua);
+                    JOptionPane.showMessageDialog(null, "Success", "Notification", JOptionPane.INFORMATION_MESSAGE);
 
-                   if (isElectric) {
-            electricCarCount++;
+                    if (isElectric) {
+                        electricCarCount++;
                     } else {
-            nonElectricCarCount++;
-        }
+                        nonElectricCarCount++;
+                    }
+                }
             }
         });
 
@@ -177,4 +184,3 @@ public class CarUI {
 
 
     }
-

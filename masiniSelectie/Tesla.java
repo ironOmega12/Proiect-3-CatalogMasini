@@ -91,13 +91,18 @@ public class Tesla {
         TeslaBackgroundLabel.add(btnAdd);
         btnAdd.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                MasiniElectrice masinaNoua = new MasiniElectrice(textFieldVIN.getText(), Double.parseDouble(textFieldKM.getText()), brand, selectetModel, 50);
-                MasiniElectrice.addCar(masinaNoua);
-                JOptionPane.showMessageDialog(null, "Success", "Notification", JOptionPane.INFORMATION_MESSAGE);
-                if(isElectric==true){
-                    electricCarCount++;
+            double km = Double.parseDouble(textFieldKM.getText());
+            if (km < 0) {
+                JOptionPane.showMessageDialog(null, "KM nu pot fi negativi", "Invalid Input", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    MasiniElectrice masinaNoua = new MasiniElectrice(textFieldVIN.getText(),
+                            Double.parseDouble(textFieldKM.getText()), brand, selectetModel, 50);
+                    MasiniElectrice.addCar(masinaNoua);
+                    JOptionPane.showMessageDialog(null, "Success", "Notification", JOptionPane.INFORMATION_MESSAGE);
+                    if (isElectric == true) {
+                        electricCarCount++;
+                    }
                 }
-
             }
         });
 
