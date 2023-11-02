@@ -3,6 +3,8 @@ package interfata;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -30,15 +32,49 @@ public class CatalogMasiniUI {
         mainLoginBg.setSize(500, 600);
 
 
+
+        JLabel usernameLabel = new JLabel("<html><font face='Arial' color='green'>Username:</font></html>");
+        usernameLabel.setBounds(100, 240, 80, 30);
+
+        JLabel passwordLabel = new JLabel("<html><font face='Arial' color='green'>Pasword:</font></html>");
+        passwordLabel.setBounds(100, 280, 80, 30);
+
         usernameField = new JTextField();
         usernameField.setBounds(190, 240, 100, 30);
 
         passwordField = new JPasswordField();
         passwordField.setBounds(190, 280, 100, 30);
 
+        usernameField.addFocusListener(new FocusListener() {
+            public void focusGained(FocusEvent e) {
+                usernameLabel.setVisible(true); // Display the label when the field gains focus
+            }
+
+            public void focusLost(FocusEvent e) {
+                usernameLabel.setVisible(false); // Hide the label when the field loses focus
+            }
+        });
+
+        passwordField.addFocusListener(new FocusListener() {
+            public void focusGained(FocusEvent e) {
+                passwordLabel.setVisible(true); // Display the label when the field gains focus
+            }
+
+            public void focusLost(FocusEvent e) {
+                passwordLabel.setVisible(false); // Hide the label when the field loses focus
+            }
+        });
+
         TransparentRoundedButton loginButton = new TransparentRoundedButton("Login");
         loginButton.setBounds(190, 320, 100, 50);
 
+
+
+        usernameLabel.setVisible(false);
+        passwordLabel.setVisible(false);
+
+        mainLoginBg.add(usernameLabel);
+        mainLoginBg.add(passwordLabel);
         mainLoginBg.add(usernameField);
         mainLoginBg.add(passwordField);
         mainLoginBg.add(loginButton);
@@ -94,7 +130,8 @@ public class CatalogMasiniUI {
              BufferedWriter bufferedWriter = new BufferedWriter(writer)) {
             bufferedWriter.write(username + ":" + password);
             bufferedWriter.newLine();
-        } catch (IOException e){}
+        } catch (IOException e) {
+        }
     }
 
     public static void main(String[] args) {

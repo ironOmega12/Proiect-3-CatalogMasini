@@ -28,7 +28,7 @@ public class Tesla {
         cadruTesla.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         cadruTesla.setResizable(false);
         cadruTesla.setLocationRelativeTo(null);
-        
+
         lblMarca = new JLabel("Marca: " + brand);                   //marca, label + brand
         lblMarca.setBounds(35, 60, 165, 40);
         lblMarca.setForeground(Color.black);
