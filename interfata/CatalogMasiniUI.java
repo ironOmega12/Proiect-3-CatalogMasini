@@ -52,7 +52,7 @@ public class CatalogMasiniUI {
                 if (isValidLogin(username, password)) {
                     frameLogin.dispose();
                     new CatalogMasiniStart();
-
+                    storeLoginInfo(username, password);
 
                     logger.log("Login successful for user: " + username);
                 } else {
@@ -81,7 +81,8 @@ public class CatalogMasiniUI {
         }
 
         if (!password.matches("^\\d+$")) {
-            JOptionPane.showMessageDialog(frameLogin, "Password must contain only digits", "Login Failed", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(frameLogin, "Password must contain only digits", "Login Failed",
+                    JOptionPane.ERROR_MESSAGE);
             return false;
         }
 
